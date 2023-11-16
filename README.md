@@ -1,5 +1,6 @@
 ## Tool Name 
 Very nice tool.
+
 ##License
 Free for academia, for commercial use, you gotta get a licence
 
@@ -12,11 +13,11 @@ $ python -m venv <venv_name>
 ```
 Activate virtual environment on Windows OS 
 ```bash
-.\<venv\_name>\Scripts\activate.bat
+$ .\<venv\_name>\Scripts\activate.bat
 ```
 Activate virtual environment on Linux or MAC OS
 ```bash
-source ./<venv_name>/bin/activate
+$ source ./<venv_name>/bin/activate
 ```
 Install pip package requirements.
 ```bash
