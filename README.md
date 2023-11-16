@@ -1,5 +1,5 @@
 ## Tool Name 
-Very nice tool.
+Very nice tools.
 
 ## License
 Free for academia, for commercial use, you gotta get a licence
