@@ -1,7 +1,7 @@
 ## Tool Name 
 Very nice tool.
 
-##License
+## License
 Free for academia, for commercial use, you gotta get a licence
 
 ## Installation
