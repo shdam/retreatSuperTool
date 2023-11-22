@@ -52,27 +52,32 @@ display_final_message <- function(score, total) {
         cat("Good effort! Keep learning and you'll be an expert in no time!\n")
     }
 }
-# Welcome and Instructions
-cat("Welcome to the Animal Facts Quiz!\n")
-cat("Instructions: Answer each question by typing the letter corresponding to your choice (A, B, or C) and press Enter.\n\n")
 
-# Quiz Loop
-total_score <- 0
-
-for (i in 1:nrow(questions_df)) {
-    ask_question(questions_df$Question[i], questions_df$Options[i])
-    user_input <- get_user_input()
+runQuiz <- function(){
+    # Welcome and Instructions
+    cat("Welcome to the Animal Facts Quiz!\n")
+    cat("Instructions: Answer each question by typing the letter corresponding to your choice (A, B, or C) and press Enter.\n\n")
     
-    # Score calculation and feedback
-    score <- calculate_score(user_input, questions_df$CorrectAnswer[i])
-    total_score <- total_score + score
+    # Quiz Loop
+    total_score <- 0
     
-    if (score == 1) {
-        cat("Correct!\n")
-    } else {
-        cat("Wrong. The correct answer was ", questions_df$CorrectAnswer[i], "\n")
+    for (i in 1:nrow(questions_df)) {
+        ask_question(questions_df$Question[i], questions_df$Options[i])
+        user_input <- get_user_input()
+        
+        # Score calculation and feedback
+        score <- calculate_score(user_input, questions_df$CorrectAnswer[i])
+        total_score <- total_score + score
+        
+        if (score == 1) {
+            cat("Correct!\n")
+        } else {
+            cat("Wrong. The correct answer was ", questions_df$CorrectAnswer[i], "\n")
+        }
     }
+    
+    # Final Message
+    display_final_message(total_score, nrow(questions_df))
+    
 }
 
-# Final Message
-display_final_message(total_score, nrow(questions_df))
