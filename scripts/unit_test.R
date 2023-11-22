@@ -14,7 +14,7 @@ test_some_function <- function(inputs = c("input_1", "input_2", "input_3"),
     expected <- expected_outputs[i]
     stopifnot(result == expected)
   }
-  print("All tests passed")
+  print("All awsome tests passed")
 }
 
 # Execute the test function
