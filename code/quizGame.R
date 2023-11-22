@@ -14,6 +14,24 @@ questions_df <- data.frame(
     stringsAsFactors = FALSE
 )
 
+# Adding new questions to the existing data frame
+new_questions <- data.frame(
+    Question = c("Which animal is known to have the strongest bite in the world?",
+                 "What is the only mammal capable of true sustained flight?",
+                 "Which bird can fly backward?",
+                 "What is the largest animal ever to live on Earth?",
+                 "Which insect has a lifespan of only 24 hours?"),
+    Options = c("A: Great White Shark; B: Crocodile; C: Lion",
+                "A: Flying Squirrel; B: Bat; C: Pterosaur",
+                "A: Eagle; B: Hummingbird; C: Albatross",
+                "A: African Elephant; B: Blue Whale; C: Tyrannosaurus Rex",
+                "A: Dragonfly; B: Housefly; C: Mayfly"),
+    CorrectAnswer = c("B", "B", "B", "B", "C"),
+    stringsAsFactors = FALSE
+)
+
+questions_df <- rbind(questions_df, new_questions)
+
 
 ask_question <- function(question, options) {
     cat("\nQuestion:\n")
